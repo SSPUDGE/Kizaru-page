@@ -1,189 +1,261 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8 /"
-    <meta name="keywords" content="pudge, ezgame "
-    <meta name="description" content="куда лезет этот новичек, куда он лезет, я ловлю их на крючок  /"
-   <TITLE PUDGE</TITLE>
-  </head>
-  <body>
-    
-      <img src="https://i.scdn.co/image/ab67706c0000bebbd9b506d69ab8efef3816c252"
-      width="500"/>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kizaru — Official Page</title>
+<meta name="description" content="Kizaru — российский рэп-артист. Треки, альбомы, ссылки на платформы и соцсети.">
+<meta name="keywords" content="kizaru, кизару, born to trap, trap, рэп">
+<style>
+:root{
+  --bg:#0a0a0f; --bg2:#12121a; --card:#171722; --line:#262636;
+  --text:#f1f1f6; --muted:#9a9ab0; --accent:#a855f7; --accent2:#ec4899;
+  --grad:linear-gradient(135deg,var(--accent),var(--accent2));
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:min(1100px,92%);margin:0 auto}
+section{padding:88px 0}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:12px;letter-spacing:-.5px}
+.sub{color:var(--muted);margin-bottom:36px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
-    <h1>BORN TO TRAP-kizaru </h1>
-    <h2>track list: </h2>
-    <ul style="border: 2px solid  rgb(56, 2, 87);">
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru-Intro</li>
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru-Что за бизнес сука?</li>
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru-Block Baby</li>
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru-G Shit</li>
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru-Plug (<strong><em>сейчас играет</em></strong>)</li>
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru-Изи арифметика</li>
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru feat. Tory Lanez-Bad Blood</li>
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru-Газ в пол</li>
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru-Ice Cream</li> 
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru-Whistle Song</li>
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru-Trapazoid</li>
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru-You and me</li>
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru- Oh Whou</li>
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru,HoodRich Pablo Juan-Honey's Kettle</li>
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru-Mr. Slime</li>
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru- Keep Straight</li>
-      <br>
-      <li><a href="https://genius.com/albums/Kizaru/Born-to-trap"> kizaru-Narcos</li>
-      <br>
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(10,10,15,.75);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-weight:800;letter-spacing:2px}
+nav ul{display:flex;gap:26px;list-style:none}
+nav ul a{color:var(--muted);font-size:.95rem;transition:.2s}
+nav ul a:hover{color:var(--text)}
+.burger{display:none;background:none;border:0;color:var(--text);font-size:1.7rem;cursor:pointer}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:80px;position:relative;
+  background:radial-gradient(circle at 80% 20%,rgba(168,85,247,.25),transparent 45%),radial-gradient(circle at 10% 90%,rgba(236,72,153,.18),transparent 45%)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.tag{display:inline-block;border:1px solid var(--line);padding:4px 14px;border-radius:99px;color:var(--muted);font-size:.85rem;margin-bottom:18px}
+.hero h1{font-size:clamp(3rem,10vw,6.5rem);line-height:1;letter-spacing:-3px;font-weight:900}
+.hero p{color:var(--muted);margin:20px 0 32px;max-width:460px}
+.cover{border-radius:20px;overflow:hidden;box-shadow:0 30px 80px rgba(168,85,247,.35);aspect-ratio:1;background:var(--grad);justify-self:center;width:min(100%,420px);transform:rotate(3deg);transition:.4s}
+.cover:hover{transform:rotate(0) scale(1.02)}
+.cover img{width:100%;height:100%;object-fit:cover}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:99px;font-weight:700;border:0;cursor:pointer;font-size:1rem;transition:.2s}
+.btn-main{background:var(--grad);color:#fff;box-shadow:0 8px 30px rgba(168,85,247,.4)}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(236,72,153,.45)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line);margin-left:10px}
+.btn-ghost:hover{border-color:var(--accent)}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+.about p{color:var(--muted);margin-bottom:14px}
+.stats{display:grid;gap:14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.stat b{font-size:1.8rem;display:block}
+.stat span{color:var(--muted);font-size:.9rem}
+
+/* TRACKS */
+.tracks{background:var(--bg2)}
+.tl{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tl li{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;cursor:pointer;transition:.2s}
+.tl li:hover{border-color:var(--accent);transform:translateX(4px)}
+.tl .n{color:var(--muted);width:24px;text-align:right;font-variant-numeric:tabular-nums}
+.tl .t{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tl .t small{color:var(--muted)}
+.tl .p{opacity:0;font-size:.75rem;color:var(--accent2);font-weight:700}
+.tl li.on{border-color:var(--accent2);background:linear-gradient(90deg,rgba(168,85,247,.18),var(--card))}
+.tl li.on .p{opacity:1}
+.eq{display:inline-flex;gap:2px;align-items:flex-end;height:12px;margin-right:6px}
+.eq i{width:3px;background:var(--accent2);animation:eq 1s infinite ease-in-out}
+.eq i:nth-child(2){animation-delay:.2s}.eq i:nth-child(3){animation-delay:.4s}
+@keyframes eq{0%,100%{height:3px}50%{height:12px}}
+
+/* ALBUMS */
+.albums{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px}
+.album{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;transition:.25s}
+.album:hover{transform:translateY(-6px);border-color:var(--accent)}
+.album .ic{width:100%;aspect-ratio:1;border-radius:12px;background:var(--grad);display:grid;place-items:center;font-size:2.6rem;margin-bottom:16px;opacity:.9}
+.album h3{font-size:1.05rem}
+.album p{color:var(--muted);font-size:.9rem}
+
+/* PLATFORMS & SOCIAL */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.plat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 16px;text-align:center;font-weight:600;transition:.25s}
+.plat:hover{border-color:var(--accent);background:var(--bg2);transform:translateY(-4px)}
+.plat span{display:block;font-size:1.8rem;margin-bottom:8px}
+.soc{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
+.soc a{padding:13px 26px;border-radius:99px;font-weight:700;color:#fff;transition:.2s}
+.soc a:hover{transform:translateY(-3px);filter:brightness(1.12)}
+.tg{background:#229ed9}.ig{background:linear-gradient(45deg,#f09433,#dc2743,#bc1888)}.yt{background:#e62117}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:40px}
+.contact p{color:var(--muted);margin-bottom:10px}
+form{display:grid;gap:14px}
+input,textarea{width:100%;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--text);font:inherit}
+input:focus,textarea:focus{outline:0;border-color:var(--accent)}
+textarea{resize:vertical;min-height:120px}
+#ok{color:#4ade80;min-height:1.4em}
+
+footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:var(--muted);font-size:.9rem}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(24px);transition:.7s}
+.rv.show{opacity:1;transform:none}
+
+/* MOBILE */
+@media(max-width:860px){
+  .hero .wrap,.about,.contact{grid-template-columns:1fr}
+  .cover{order:-1;width:min(70%,320px);transform:none}
+  .tl{grid-template-columns:1fr}
+  .albums{grid-template-columns:1fr}
+  .grid4{grid-template-columns:1fr 1fr}
+  section{padding:64px 0}
+  .burger{display:block}
+  nav ul{position:absolute;top:62px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg2);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:.3s}
+  nav ul.open{max-height:320px}
+  nav ul li a{display:block;padding:16px 4%}
+  .btn-ghost{margin:12px 0 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#home" class="logo">KIZARU</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+    <ul id="menu">
+      <li><a href="#about">Об артисте</a></li>
+      <li><a href="#tracks">Треки</a></li>
+      <li><a href="#listen">Платформы</a></li>
+      <li><a href="#contact">Контакты</a></li>
     </ul>
+  </div>
+</nav>
 
-<h1>KIZARU - PLUG </h1>
- <a href="https://genius.com/Kizaru-plug-lyrics"> track text:</a>
-  <br>
-    <p>Куда лезет этот новичок, глянь (<strong><em>куда он лезет?</em></strong>)
-      <br>Ха, я ловлю их на крючок, дядь (<strong><em>catch 'em up</em></strong>)
-      <br>Лучше прикуси свой язычок, дрянь
-      <br> Прости, ты даже не поймёшь, о чём я (<strong><em>what I'm saying?</em></strong>)
-      <br> Чё я могу поделать? Ты дурачок, бля (<strong><em>он странный</em></strong>)
-      <br> Парни исчезают по щелчку, мать
-      <br> Не смотри на них, они уже ждут морга (<strong><em>им конец</em></strong>)
-      <br> Money talk, хватит меня вечно дёргать (<strong><em>не прикасайся</em></strong>)</p>
-    <p>Замолчи, nig, замолчи
-        <br>  У нас кирпичи, nig, кирпичи
-        <br> Только не кричи, nig, не кричи
-        <br> Лучше позвони мне (<strong><em>call me</em></strong>)
-        <br> Потому что я твой (<strong><em>plug</em></strong>)</p>
-    <p>Очень высоко, hoe, ты не достанешь (<strong><em>Бурдж-Халифа</em></strong>)
-          <br>  Выдам в рот, даже если это Billie Eilish
-          <br> У меня fishscale, у них всё тот же Vanish (<strong><em>что за день?</em></strong>)
-          <br> Хочешь со мной тяпнуть, но ты вряд ли встанешь (<strong><em>умрешь</em></strong>)
-          <br> Новая шкура, новый кузов, привет Сюзен
-          <br> Прости, ты не знала, детка, но я с Юза (<strong><em>Юго-запад</em></strong>)
-          <br>  Много груза, damn, я будто с профсоюза
-          <br>Papi ruso, рано вылетел из ВУЗа
-          <br> Чёрт возьми, я в марке, где-то в лунапарке
-          <br> Столько дури, можно открыть супермаркет
-          <br> Парни на доставке, вокруг аристократки (<strong><em>Let's go</em></strong>)
-          <br> Свои недостатки, сучки, я всегда в обсадке
-          <br> Тридцать карат мой перстень (<strong><em>что?</em></strong>)
-          <br> Bitch, о да, yesserski
-          <br> Ты же знал, я дерзкий
-          <br> Почисти уши, bitch, ты мерзкий (<strong><em>фу</em></strong>)
-          <br> Он одел обрезки, удачной, бля, поездки
-          <br>Его мама такая: "Куда делись занавески?"
-          <br>(<strong><em>отвечаю, они все странные</em></strong>)</p>
+<header class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <span class="tag">🎤 Официальная страница</span>
+      <h1 class="grad">KIZARU</h1>
+      <p>Trap. Street. Атмосфера. Новые релизы, альбомы и всё, что нужно, чтобы слушать на полной громкости.</p>
+      <a href="#listen" class="btn btn-main">▶ Слушать</a>
+      <a href="#tracks" class="btn btn-ghost">Треклист</a>
+    </div>
+    <div class="cover">
+      <img src="https://i.scdn.co/image/ab67706c0000bebbd9b506d69ab8efef3816c252" alt="Обложка Born to Trap" onerror="this.style.display='none'">
+    </div>
+  </div>
+</header>
 
-<h2>Лучшие альбомы артиста</h2>
-<table border="4" width="500">
-<thead>
-  <tr>
-    <th>name album</th>
-    <th>listening</th>
-  </tr>
-</thead>
-<tbody>
- <tr>
-   <td><strong><a href="https://genius.com/Big-baby-tape-and-kizaru-bandana-lyrics" target="_blank">BANDANA I- Big Baby Tape, kizaru</a></strong></td>
-    <td>124 133 828 listening</td>
- </tr>
-  <tr>
-    <td><strong><a href="https://genius.com/albums/Kizaru/Born-to-trap" target="_blank">BORN TO TRAP- kizaru</a></strong> </td>
-    <td>63 414 835 listening</td>
-  </tr>
-  <tr>
-    <td><strong> <a href="https://genius.com/albums/Kizaru/Karmageddon" target="_blank">Karmageddon- kizaru</a></strong></td>
-    <td>43 944 015 listening</td>
-  </tr>
-</table>
-</tbody>
-  <h4> где можно отрыть Кизяку:</h4>
-  <li><a href="https://www.instagram.com/tommyhellatrigger" target="_blank">instagram</a></li>
-  <li><a href="https://www.youtube.com/channel/UCdzgn-YQ-1qdd9iV1GKHn1w" target="_blank">youtube</a></li>
+<section id="about">
+  <div class="wrap about">
+    <div class="rv">
+      <h2>Об <span class="grad">артисте</span></h2>
+      <p>Kizaru — российский рэп-исполнитель из Санкт-Петербурга, один из заметных представителей трэп-сцены. Узнаваемая подача, плотный бит и фирменная атмосфера сделали его треки и альбомы популярными у слушателей.</p>
+      <p>Среди известных работ — альбом <b>Born to Trap</b>, <b>Karmageddon</b> и совместный проект <b>BANDANA I</b> с Big Baby Tape.</p>
+      <p>Отредактируйте этот текст под себя — добавьте реальную биографию, год начала карьеры и достижения.</p>
+    </div>
+    <div class="stats rv">
+      <div class="stat"><b class="grad">124M+</b><span>прослушиваний BANDANA I</span></div>
+      <div class="stat"><b class="grad">63M+</b><span>прослушиваний Born to Trap</span></div>
+      <div class="stat"><b class="grad">43M+</b><span>прослушиваний Karmageddon</span></div>
+    </div>
+  </div>
+</section>
 
-  <br>
-  <form style="border: 2px solid  rgb(1, 0, 9);">
-  <div>
-    <label for="login">Login</label>
-    <input type="text" id="login" placeholder=" enter your login">
-    </label>
-  </div>
+<section class="tracks" id="tracks">
+  <div class="wrap">
+    <h2 class="rv">Born to Trap — <span class="grad">треклист</span></h2>
+    <p class="sub rv">Нажмите на трек, чтобы отметить его как «сейчас играет». Тексты — на Genius.</p>
+    <ul class="tl rv" id="tl"></ul>
 
-  <br>
-  <div>
-    <label for="password">Password</label>
-    <input type="password" id="password"placeholder=" enter your pass">
+    <div class="albums">
+      <a class="album rv" href="https://genius.com/Big-baby-tape-and-kizaru-bandana-lyrics" target="_blank" rel="noopener">
+        <div class="ic">💿</div><h3>BANDANA I</h3><p>Big Baby Tape, Kizaru · 124 133 828 прослушиваний</p>
+      </a>
+      <a class="album rv" href="https://genius.com/albums/Kizaru/Born-to-trap" target="_blank" rel="noopener">
+        <div class="ic">🔥</div><h3>Born to Trap</h3><p>Kizaru · 63 414 835 прослушиваний</p>
+      </a>
+      <a class="album rv" href="https://genius.com/albums/Kizaru/Karmageddon" target="_blank" rel="noopener">
+        <div class="ic">⚡</div><h3>Karmageddon</h3><p>Kizaru · 43 944 015 прослушиваний</p>
+      </a>
+    </div>
   </div>
- 
-  <br>
-  <div>
-    <label for="number">Your favorite number</label>
-    <input type="number" id="number" min="0">
-  </div>
-  <br>
-  <div>
-    <label for="range">Range</label>
-    <input type="range" id="range">
-  </div>
-  <br>
-  <div>
-    <label for="color">Your favorite color </label>
-    <input type="color" id="color">
-  </div>
-  <br>
-  <div>
-    <label for="message">SMS FOR YOUR FAVORITE MUSIC ARTIST </label>
-    <br>
-    <textarea type="color BLUE " id="message" cols="50" rows="8">
-    </textarea>
-  </div>
-  <br>
-  <div>
-    <label for="sex">Gender of a person</label>
-    <select id="sex">
-      <option value="">famale</option>
-      <option value="">male</option>
-    </select>
-  </div>
-  <br>
+</section>
 
-  <div>
-    <label >How much will you bet to this artist?</label>
-    <input type="radio"name="www">1
-    <input type="radio"name="www">2
-    <input type="radio"name="www">3
-    <input type="radio"name="www">4
-    <input type="radio"name="www">5
+<section id="listen">
+  <div class="wrap">
+    <h2 class="rv">Слушай на <span class="grad">платформах</span></h2>
+    <p class="sub rv">Ссылки ведут на поиск по артисту — замените их на прямые ссылки на профиль.</p>
+    <div class="grid4 rv">
+      <a class="plat" target="_blank" rel="noopener" href="https://open.spotify.com/search/Kizaru"><span>🟢</span>Spotify</a>
+      <a class="plat" target="_blank" rel="noopener" href="https://music.apple.com/search?term=Kizaru"><span>🍎</span>Apple Music</a>
+      <a class="plat" target="_blank" rel="noopener" href="https://music.yandex.ru/search?text=Kizaru"><span>🟡</span>Яндекс Музыка</a>
+      <a class="plat" target="_blank" rel="noopener" href="https://music.youtube.com/search?q=Kizaru"><span>🔴</span>YouTube Music</a>
+    </div>
   </div>
-  <br>
+</section>
 
-  <div>
-    <label >What did you like</label>
-    <br>
-    <input type="checkbox"name="rare">Instrumental
-    <input type="checkbox"name="rare">Voice
-    <input type="checkbox"name="rare">Production
-    <input type="checkbox"name="rare">Clip
-    <input type="checkbox"name="rare">Girls
+<section class="tracks" id="contact">
+  <div class="wrap contact">
+    <div class="rv">
+      <h2>Контакты и <span class="grad">соцсети</span></h2>
+      <p>Для сотрудничества, концертов и рекламы:</p>
+      <p><b>📧 booking@example.com</b></p>
+      <p style="margin-top:18px">Мы в соцсетях:</p>
+      <div class="soc">
+        <a class="tg" href="https://t.me/your_channel" target="_blank" rel="noopener">Telegram</a>
+        <a class="ig" href="https://www.instagram.com/tommyhellatrigger" target="_blank" rel="noopener">Instagram</a>
+        <a class="yt" href="https://www.youtube.com/channel/UCdzgn-YQ-1qdd9iV1GKHn1w" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+    <form class="rv" id="form">
+      <input type="text" id="name" placeholder="Ваше имя" required>
+      <input type="email" id="mail" placeholder="Email" required>
+      <textarea id="msg" placeholder="Сообщение артисту" required></textarea>
+      <button class="btn btn-main" type="submit">Отправить</button>
+      <div id="ok"></div>
+    </form>
   </div>
-  <br>
-  <div>
-    <input type="submit" value="register yourself">
-  </div>
-</form>
+</section>
 
-  
-  </body> 
+<footer>© <span id="y"></span> Kizaru Fan Page · Сделано с ♥ для музыки</footer>
+
+<script>
+const tracks=[
+ "Intro","Что за бизнес сука?","Block Baby","G Shit","Plug","Изи арифметика",
+ "Bad Blood|feat. Tory Lanez","Газ в пол","Ice Cream","Whistle Song","Trapazoid",
+ "You and me","Oh Whou","Honey's Kettle|feat. HoodRich Pablo Juan","Mr. Slime","Keep Straight","Narcos"
+];
+const tl=document.getElementById('tl');
+tracks.forEach((s,i)=>{
+  const [t,f]=s.split('|');
+  const li=document.createElement('li');
+  li.innerHTML=`<span class="n">${i+1}</span><span class="t">${t}${f?` <small>${f}</small>`:''}</span><span class="p"><span class="eq"><i></i><i></i><i></i></span>играет</span>`;
+  if(t==="Plug")li.classList.add('on');
+  li.onclick=()=>{tl.querySelectorAll('li').forEach(x=>x.classList.remove('on'));li.classList.add('on')};
+  tl.appendChild(li);
+});
+
+const menu=document.getElementById('menu');
+document.getElementById('burger').onclick=()=>menu.classList.toggle('open');
+menu.querySelectorAll('a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
+
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('show');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+document.getElementById('form').onsubmit=e=>{
+  e.preventDefault();
+  document.getElementById('ok').textContent='Спасибо! Сообщение принято ✔ (демо: подключите свой сервер или Formspree)';
+  e.target.reset();
+};
+document.getElementById('y').textContent=new Date().getFullYear();
+</script>
+</body>
 </html>
