@@ -57,6 +57,9 @@ nav ul a:hover{color:var(--text)}
 .stat b{font-size:1.8rem;display:block}
 .stat span{color:var(--muted);font-size:.9rem}
 
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;font-size:.9rem;color:var(--muted)}
+.chips .new{background:var(--grad);color:#fff;border-color:transparent;font-weight:700}
 /* TRACKS */
 .tracks{background:var(--bg2)}
 .tl{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -141,7 +144,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
 <header class="hero" id="home">
   <div class="wrap">
     <div>
-      <span class="tag">🎤 Официальная страница</span>
+      <span class="tag">🔥 Новый альбом Ca$hey — 11 сентября 2026</span>
       <h1 class="grad">KIZARU</h1>
       <p>Trap. Street. Атмосфера. Новые релизы, альбомы и всё, что нужно, чтобы слушать на полной громкости.</p>
       <a href="#listen" class="btn btn-main">▶ Слушать</a>
@@ -154,17 +157,26 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
 </header>
 
 <section id="about">
-  <div class="wrap about">
-    <div class="rv">
-      <h2>Об <span class="grad">артисте</span></h2>
-      <p>Kizaru — российский рэп-исполнитель из Санкт-Петербурга, один из заметных представителей трэп-сцены. Узнаваемая подача, плотный бит и фирменная атмосфера сделали его треки и альбомы популярными у слушателей.</p>
-      <p>Среди известных работ — альбом <b>Born to Trap</b>, <b>Karmageddon</b> и совместный проект <b>BANDANA I</b> с Big Baby Tape.</p>
-      <p>Отредактируйте этот текст под себя — добавьте реальную биографию, год начала карьеры и достижения.</p>
+  <div class="wrap">
+    <div class="about">
+      <div class="rv">
+        <h2>Об <span class="grad">артисте</span></h2>
+        <p><b>Kizaru</b> — сценический псевдоним российского рэпера Олега Викторовича Нечипоренко, родившегося 21 мая 1989 года в Санкт-Петербурге. Один из заметных представителей русскоязычной трэп-сцены: трэп-биты, жёсткая подача, запоминающиеся панчлайны и тексты о деньгах, независимости, личном опыте и уличной культуре.</p>
+        <p><b>Начало карьеры.</b> Музыку Олег начал примерно в 2011 году под псевдонимом Dealing Ounces, выпустив первые треки и микстейп Mighty Flair. Позже выступал как YVN KXX, а затем стал известен как Kizaru. В 2014 году переехал в Барселону — этот период стал важным для его творчества. В 2015 году клип на трек «Никто не нужен» привлёк внимание слушателей.</p>
+        <p><b>Главные достижения.</b> Альбом <i>Mas Fuerte</i> (2016) и <i>Яд</i> (2017), занявший первые позиции в российских цифровых чартах. Совместный проект <i>Bandana I</i> с Big Baby Tape (2021) стал одним из самых известных релизов русскоязычного трэпа. Также Kizaru основал творческое объединение <b>Haunted Family</b>.</p>
+        <p><b>Новости 2026.</b> В 2025 году вышел альбом <i>Simba</i>. В июле 2026 артист представил <i>Eskimos Freestyle</i> и намекнул на новый альбом, а 11 сентября 2026 выпустил <b>Ca$hey</b> — агрессивный трэп вперемешку с меланхоличными лирическими треками, в работе над частью песен участвовал Big Baby Tape. Также Kizaru заявил, что будет ориентироваться прежде всего на Spotify и Apple Music — его музыка постепенно исчезает с российских стримингов.</p>
+      </div>
+      <div class="stats rv">
+        <div class="stat"><b class="grad">2011</b><span>начало музыкальной карьеры</span></div>
+        <div class="stat"><b class="grad">124M+</b><span>прослушиваний BANDANA I</span></div>
+        <div class="stat"><b class="grad">Ca$hey</b><span>новый альбом · 11.09.2026</span></div>
+      </div>
     </div>
-    <div class="stats rv">
-      <div class="stat"><b class="grad">124M+</b><span>прослушиваний BANDANA I</span></div>
-      <div class="stat"><b class="grad">63M+</b><span>прослушиваний Born to Trap</span></div>
-      <div class="stat"><b class="grad">43M+</b><span>прослушиваний Karmageddon</span></div>
+    <h3 class="rv" style="margin:44px 0 14px">Дискография</h3>
+    <div class="chips rv">
+      <span>2016 · Mas Fuerte</span><span>2017 · Яд</span><span>2018 · Назад в будущее</span><span>2019 · Karmageddon</span>
+      <span>2020 · Born to Trap</span><span>2021 · Bandana I</span><span>2022 · First Day Out</span><span>2022 · Тебя любят там, где меня нет</span>
+      <span>2024 · Quazimodo</span><span>2025 · Simba</span><span class="new">2026 · Ca$hey</span>
     </div>
   </div>
 </section>
@@ -192,7 +204,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
 <section id="listen">
   <div class="wrap">
     <h2 class="rv">Слушай на <span class="grad">платформах</span></h2>
-    <p class="sub rv">Ссылки ведут на поиск по артисту — замените их на прямые ссылки на профиль.</p>
+    <p class="sub rv">Артист делает ставку на международные платформы — Spotify и Apple Music. Ссылки ведут на поиск; замените их на прямые ссылки на профиль.</p>
     <div class="grid4 rv">
       <a class="plat" target="_blank" rel="noopener" href="https://open.spotify.com/search/Kizaru"><span>🟢</span>Spotify</a>
       <a class="plat" target="_blank" rel="noopener" href="https://music.apple.com/search?term=Kizaru"><span>🍎</span>Apple Music</a>
