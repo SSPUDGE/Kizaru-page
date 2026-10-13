@@ -58,24 +58,47 @@ nav ul a:hover{color:var(--text)}
 .stat span{color:var(--muted);font-size:.9rem}
 
 .chips{display:flex;flex-wrap:wrap;gap:10px}
-.chips span{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;font-size:.9rem;color:var(--muted)}
+.chips button{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;font:inherit;font-size:.9rem;color:var(--muted);cursor:pointer;transition:.2s}
+.chips button:hover{border-color:var(--accent);color:var(--text)}
 .chips .new{background:var(--grad);color:#fff;border-color:transparent;font-weight:700}
-/* TRACKS */
+/* TRACKS / ACCORDION */
 .tracks{background:var(--bg2)}
-.tl{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.tl li{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;cursor:pointer;transition:.2s}
-.tl li:hover{border-color:var(--accent);transform:translateX(4px)}
-.tl .n{color:var(--muted);width:24px;text-align:right;font-variant-numeric:tabular-nums}
-.tl .t{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.tl .t small{color:var(--muted)}
-.tl .p{opacity:0;font-size:.75rem;color:var(--accent2);font-weight:700}
-.tl li.on{border-color:var(--accent2);background:linear-gradient(90deg,rgba(168,85,247,.18),var(--card))}
-.tl li.on .p{opacity:1}
-.eq{display:inline-flex;gap:2px;align-items:flex-end;height:12px;margin-right:6px}
-.eq i{width:3px;background:var(--accent2);animation:eq 1s infinite ease-in-out}
-.eq i:nth-child(2){animation-delay:.2s}.eq i:nth-child(3){animation-delay:.4s}
-@keyframes eq{0%,100%{height:3px}50%{height:12px}}
-
+.acc{display:grid;gap:10px}
+.al{background:var(--card);border:1px solid var(--line);border-radius:14px;transition:border-color .25s,box-shadow .25s}
+.al:hover{border-color:#3a3a52}
+.al.open{border-color:var(--accent);box-shadow:0 8px 30px rgba(168,85,247,.15)}
+.hd{width:100%;display:flex;align-items:center;gap:14px;background:none;border:0;color:inherit;font:inherit;text-align:left;padding:16px 18px;cursor:pointer}
+.hd .yr{color:var(--accent2);font-weight:800;font-variant-numeric:tabular-nums;min-width:44px}
+.hd .nm{flex:1;min-width:0;font-weight:700;overflow-wrap:anywhere}
+.badge{display:inline-block;margin-left:8px;padding:1px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted);font-size:.7rem;font-weight:600;vertical-align:middle}
+.badge.new{background:var(--grad);border-color:transparent;color:#fff}
+.hd .cnt{color:var(--muted);font-size:.85rem;white-space:nowrap}
+.hd .tg{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:.9rem;white-space:nowrap}
+.al.open .tg{color:var(--text)}
+.hd .tg svg{transition:transform .35s ease}
+.al.open .tg svg{transform:rotate(180deg)}
+.hd:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-radius:14px}
+.pn{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.al.open .pn{grid-template-rows:1fr}
+.pn .in{overflow:hidden;min-height:0;visibility:hidden;opacity:0;transition:opacity .35s ease,visibility .4s}
+.al.open .pn .in{visibility:visible;opacity:1}
+.pc{padding:0 18px 18px}
+.tr{list-style:none;display:grid;gap:6px;margin-bottom:14px}
+.tr li{display:flex;align-items:center;gap:14px;padding:10px 14px;border-radius:10px;background:var(--bg2);border:1px solid var(--line)}
+.tr .n{color:var(--muted);width:26px;text-align:right;font-variant-numeric:tabular-nums}
+.tr .t{flex:1;min-width:0;overflow-wrap:anywhere}
+.tr .t small{color:var(--muted);margin-left:6px}
+.lk{color:var(--accent2);font-size:.85rem;font-weight:600;white-space:nowrap}
+.lk:hover{text-decoration:underline}
+.empty{color:var(--muted);font-size:.92rem;margin-bottom:14px}
+.gl{display:inline-flex;padding:9px 20px;font-size:.9rem}
+@media(max-width:560px){
+  .hd{padding:14px;gap:10px}
+  .hd .cnt{display:none}
+  .hd .yr{min-width:38px}
+  .pc{padding:0 12px 14px}
+  .tr li{padding:9px 10px;gap:10px}
+}
 /* ALBUMS */
 .albums{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px}
 .album{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;transition:.25s}
@@ -134,7 +157,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
     <button class="burger" id="burger" aria-label="Меню">☰</button>
     <ul id="menu">
       <li><a href="#about">Об артисте</a></li>
-      <li><a href="#tracks">Треки</a></li>
+      <li><a href="#tracks">Дискография</a></li>
       <li><a href="#listen">Платформы</a></li>
       <li><a href="#contact">Контакты</a></li>
     </ul>
@@ -148,7 +171,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
       <h1 class="grad">KIZARU</h1>
       <p>Trap. Street. Атмосфера. Новые релизы, альбомы и всё, что нужно, чтобы слушать на полной громкости.</p>
       <a href="#listen" class="btn btn-main">▶ Слушать</a>
-      <a href="#tracks" class="btn btn-ghost">Треклист</a>
+      <a href="#tracks" class="btn btn-ghost">Дискография</a>
     </div>
     <div class="cover">
       <img src="https://i.scdn.co/image/ab67706c0000bebbd9b506d69ab8efef3816c252" alt="Обложка Born to Trap" onerror="this.style.display='none'">
@@ -173,19 +196,15 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
       </div>
     </div>
     <h3 class="rv" style="margin:44px 0 14px">Дискография</h3>
-    <div class="chips rv">
-      <span>2016 · Mas Fuerte</span><span>2017 · Яд</span><span>2018 · Назад в будущее</span><span>2019 · Karmageddon</span>
-      <span>2020 · Born to Trap</span><span>2021 · Bandana I</span><span>2022 · First Day Out</span><span>2022 · Тебя любят там, где меня нет</span>
-      <span>2024 · Quazimodo</span><span>2025 · Simba</span><span class="new">2026 · Ca$hey</span>
-    </div>
+    <div class="chips rv" id="chips"></div>
   </div>
 </section>
 
 <section class="tracks" id="tracks">
   <div class="wrap">
-    <h2 class="rv">Born to Trap — <span class="grad">треклист</span></h2>
-    <p class="sub rv">Нажмите на трек, чтобы отметить его как «сейчас играет». Тексты — на Genius.</p>
-    <ul class="tl rv" id="tl"></ul>
+    <h2 class="rv">Дис<span class="grad">кография</span></h2>
+    <p class="sub rv">Нажмите на релиз, чтобы открыть треклист. Откроется только один релиз за раз.</p>
+    <div class="acc rv" id="acc"></div>
 
     <div class="albums">
       <a class="album rv" href="https://genius.com/Big-baby-tape-and-kizaru-bandana-lyrics" target="_blank" rel="noopener">
@@ -240,20 +259,70 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
 <footer>© <span id="y"></span> Kizaru Fan Page · Сделано с ♥ для музыки</footer>
 
 <script>
-const tracks=[
- "Intro","Что за бизнес сука?","Block Baby","G Shit","Plug","Изи арифметика",
- "Bad Blood|feat. Tory Lanez","Газ в пол","Ice Cream","Whistle Song","Trapazoid",
- "You and me","Oh Whou","Honey's Kettle|feat. HoodRich Pablo Juan","Mr. Slime","Keep Straight","Narcos"
+// ===== ДАННЫЕ ДИСКОГРАФИИ =====
+// Чтобы добавить треки: tr:[["Название","ссылка на прослушивание (можно пустую)","feat. ..."], ...]
+const G="https://genius.com/";
+const BTT="https://genius.com/albums/Kizaru/Born-to-trap";
+const albums=[
+ {y:2011,n:"Mighty Flair",u:G+"23935334/Genius-rsc-discographies-kizaru/Mighty-flair-2011",tr:[]},
+ {y:2013,n:"ПОСЛЕДНИЙ ДЕНЬ",k:"Mixtape",u:G+"23935346/Genius-rsc-discographies-kizaru/Mixtape-2013",tr:[]},
+ {y:2014,n:"PROLETAYANADGNEZDOMKUKUSHKI",k:"EP",u:G+"23935375/Genius-rsc-discographies-kizaru/Proletayanadgnezdomkukushki-ep-2014",tr:[]},
+ {y:2016,n:"Mas Fuerte",u:G+"23721488/Genius-rsc-discographies-kizaru/Mas-fuerte-2016",tr:[]},
+ {y:2016,n:"Long Way Up",k:"EP",u:G+"23721545/Genius-rsc-discographies-kizaru/Long-way-up-ep-2016",tr:[]},
+ {y:2017,n:"Яд",u:G+"23721623/Genius-rsc-discographies-kizaru/2017",tr:[]},
+ {y:2018,n:"Назад в будущее",u:G+"23721784/Genius-rsc-discographies-kizaru/2018",tr:[]},
+ {y:2019,n:"Karmageddon",u:G+"23721803/Genius-rsc-discographies-kizaru/Karmageddon-2019",tr:[]},
+ {y:2019,n:"SAY NO MO",k:"EP",u:G+"23721833/Genius-rsc-discographies-kizaru/Say-no-mo-ep-2019",tr:[]},
+ {y:2020,n:"BORN TO TRAP",u:G+"23721849/Genius-rsc-discographies-kizaru/Born-to-trap-2020",tr:[
+   ["Intro"],["Что за бизнес сука?"],["Block Baby"],["G Shit"],["Plug"],["Изи арифметика"],
+   ["Bad Blood","","feat. Tory Lanez"],["Газ в пол"],["Ice Cream"],["Whistle Song"],["Trapazoid"],
+   ["You and me"],["Oh Whou"],["Honey's Kettle","","feat. HoodRich Pablo Juan"],["Mr. Slime"],["Keep Straight"],["Narcos"]
+ ].map(t=>[t[0],BTT,t[2]||""])},
+ {y:2022,n:"First Day Out",u:G+"26185954/Genius-rsc-discographies-kizaru/First-day-out-2022",tr:[]},
+ {y:2022,n:"Тебя любят там где меня нет",u:G+"27155628/Genius-rsc-discographies-kizaru/2022",tr:[]},
+ {y:2023,n:"Gremlin",k:"EP",u:G+"29139294/Genius-rsc-discographies-kizaru/Gremlin-ep-2023",tr:[]},
+ {y:2024,n:"QUAZIMODO",u:G+"32402244/Genius-rsc-discographies-kizaru/Quazimodo-2024",tr:[]},
+ {y:2025,n:"SIMBA",u:G+"35957341/Genius-rsc-discographies-kizaru/Simba-2025",tr:[]},
+ {y:2025,n:"Speedy Gonzales",k:"EP",u:G+"37347827/Genius-rsc-discographies-kizaru/Speedy-gonzales-ep-2025",tr:[]},
+ {y:2026,n:"CA$HEY",new:1,u:G+"41449824/Genius-rsc-discographies-kizaru/Ca-hey-2026",tr:[]}
 ];
-const tl=document.getElementById('tl');
-tracks.forEach((s,i)=>{
-  const [t,f]=s.split('|');
-  const li=document.createElement('li');
-  li.innerHTML=`<span class="n">${i+1}</span><span class="t">${t}${f?` <small>${f}</small>`:''}</span><span class="p"><span class="eq"><i></i><i></i><i></i></span>играет</span>`;
-  if(t==="Plug")li.classList.add('on');
-  li.onclick=()=>{tl.querySelectorAll('li').forEach(x=>x.classList.remove('on'));li.classList.add('on')};
-  tl.appendChild(li);
+
+const acc=document.getElementById('acc'),chips=document.getElementById('chips');
+const chev='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+const pad=n=>String(n).padStart(2,'0');
+const plural=n=>{const a=n%10,b=n%100;return n+(a==1&&b!=11?' трек':(a>=2&&a<=4&&(b<10||b>=20)?' трека':' треков'))};
+
+albums.forEach((a,i)=>{
+  const el=document.createElement('div');el.className='al';el.id='al-'+i;
+  const badge=a.new?'<span class="badge new">NEW</span>':(a.k?`<span class="badge">${a.k}</span>`:'');
+  const body=a.tr.length
+    ?`<ul class="tr">${a.tr.map((t,j)=>`<li><span class="n">${pad(j+1)}</span><span class="t">${t[0]}${t[2]?`<small>${t[2]}</small>`:''}</span>${t[1]?`<a class="lk" href="${t[1]}" target="_blank" rel="noopener">Слушать ↗</a>`:''}</li>`).join('')}</ul>`
+    :'<p class="empty">Треклист пока не добавлен — откройте релиз на Genius.</p>';
+  el.innerHTML=`<button class="hd" aria-expanded="false" aria-controls="p-${i}">
+      <span class="yr">${a.y}</span><span class="nm">${a.n}${badge}</span>
+      <span class="cnt">${a.tr.length?plural(a.tr.length):'—'}</span>
+      <span class="tg"><span class="lb">Показать треки</span>${chev}</span></button>
+    <div class="pn" id="p-${i}"><div class="in"><div class="pc">${body}
+      <a class="btn btn-ghost gl" style="margin:0" href="${a.u}" target="_blank" rel="noopener">Открыть на Genius ↗</a></div></div></div>`;
+  el.querySelector('.hd').onclick=()=>setOpen(i,!el.classList.contains('open'));
+  acc.appendChild(el);
+
+  const c=document.createElement('button');c.textContent=`${a.y} · ${a.n}${a.k?' ('+a.k+')':''}`;
+  if(a.new)c.className='new';
+  c.onclick=()=>{setOpen(i,true);document.getElementById('tracks').scrollIntoView({behavior:'smooth'});setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'center'}),450)};
+  chips.appendChild(c);
 });
+
+function setOpen(i,open){
+  acc.querySelectorAll('.al').forEach((el,k)=>{
+    const on=open&&k===i;
+    el.classList.toggle('open',on);
+    const b=el.querySelector('.hd');
+    b.setAttribute('aria-expanded',on);
+    b.querySelector('.lb').textContent=on?'Скрыть треки':'Показать треки';
+  });
+}
+setOpen(9,true); // по умолчанию открыт BORN TO TRAP
 
 const menu=document.getElementById('menu');
 document.getElementById('burger').onclick=()=>menu.classList.toggle('open');
