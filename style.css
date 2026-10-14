@@ -1,134 +1,141 @@
-@font-face { 
-    font-weight: 400;
-    font-family: "Montserrat";
-    font-style: normal;
-    src: url("fonts/Montserrat-Regular.woff") format("woff");
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/Montserrat-Bold.woff") format("woff");
+}
+
+:root {
+  --bg: #0b0b0f;
+  --card: #15151c;
+  --text: #f5f5f7;
+  --muted: #a1a1aa;
+  --accent: #8b5cf6;
+  --accent-2: #22d3ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  padding: 80px 0 60px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.25), transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(34, 211, 238, 0.18), transparent 45%);
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: clamp(34px, 7vw, 64px);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.subtitle {
+  max-width: 640px;
+  margin: 0 auto 28px;
+  color: var(--muted);
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+section {
+  padding: 60px 0;
+}
+
+.section-title {
+  margin: 0 0 28px;
+  font-size: clamp(24px, 4vw, 36px);
+}
+
+.tracks,
+.albums {
+  display: grid;
+  gap: 16px;
+}
+
+.track,
+.album {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+
+.track a,
+.album a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.track a:hover,
+.album a:hover {
+  color: var(--accent-2);
+}
+
+footer {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 640px) {
+  header {
+    padding: 60px 0 40px;
   }
-  
-  @font-face {
-    font-weight: 700;
-    font-family: "Montserrat";
-    font-style: normal;
-    src: url("fonts/Montserrat-Bold.woff") format("woff");
+
+  section {
+    padding: 40px 0;
   }
-  
-  html,
-  body {
-    margin: 0;
-    font-family: "Montserrat", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 20px;
+
+  .button {
+    width: 100%;
+    text-align: center;
   }
-  
-  body {
-    min-width: 430px;
-    border: 2px dashed #c7e4ff;
-  }
-  
-  html::before,
-  body::before,
-  header::before,
-  footer::before,
-  main::before {
-    color: #7fc1ff;
-  }
-  
-  main,
-  header,
-  footer {
-    background-color: #f3faff;
-    border: 2px solid #7fc1ff;
-  }
-  
-  nav,
-  section,
-  article,
-  aside {
-    background-color: #f9f7ff;
-    border: 2px solid #9779ec;
-  }
-  
-  nav::before,
-  section::before,
-  article::before,
-  aside::before {
-    color: #9779ec;
-  }
-  
-  h1 {
-    font-size: 18px;
-    background-color: #ffffff;
-    border: 2px solid #ff994f;
-  }
-  
-  h1::before {
-    content: "h1";
-    color: #ff994f;
-  }
-  
-  p {
-    background-color: #ffffff;
-    border: 2px solid #f36dff;
-  }
-  
-  p::before {
-    color: #f36dff;
-    content: "p";
-  }
-  
-  * {
-    position: relative;
-    padding: 25px 25px 20px;
-    margin: 0;
-    border-radius: 4px;
-  }
-  
-  *:not(:last-child) {
-    margin-bottom: 20px;
-  }
-  
-  *::before {
-    position: absolute;
-    top: 8px;
-    left: 10px;
-    font-weight: 700;
-    font-size: 11px;
-    line-height: 10px;
-    letter-spacing: 0.04em;
-  }
-  
-  html::before {
-    content: "html";
-  }
-  
-  body::before {
-    content: "body";
-  }
-  
-  main::before {
-    content: "main";
-  }
-  
-  header::before {
-    content: "header";
-  }
-  
-  footer::before {
-    content: "footer";
-  }
-  
-  section::before {
-    content: "section";
-  }
-  
-  article::before {
-    content: "article";
-  }
-  
-  aside::before {
-    content: "aside";
-  }
-  
-  nav::before {
-    content: "nav";
-  }
+}
