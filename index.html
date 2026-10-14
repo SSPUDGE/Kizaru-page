@@ -23,6 +23,8 @@ img{max-width:100%;display:block}
 .wrap{width:min(1100px,92%);margin:0 auto}
 section{padding:88px 0}
 h2{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:12px;letter-spacing:-.5px}
+h2,h3{color:var(--accent2)}
+h2 .grad,h3 .grad{background:none;color:inherit;-webkit-text-fill-color:currentColor}
 .sub{color:var(--muted);margin-bottom:36px}
 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
@@ -46,6 +48,7 @@ nav ul a:hover{color:var(--text)}
 .cover:hover{transform:rotate(0) scale(1.02)}
 .cover img{width:100%;height:100%;object-fit:cover}
 
+.cta{display:flex;flex-wrap:wrap;gap:12px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:99px;font-weight:700;border:0;cursor:pointer;font-size:1rem;transition:.2s}
 .btn-main{background:var(--grad);color:#fff;box-shadow:0 8px 30px rgba(168,85,247,.4)}
 .btn-main:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(236,72,153,.45)}
@@ -192,7 +195,10 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:v
       <span class="tag">🔥 Новый альбом Ca$hey — 11 сентября 2026</span>
       <h1 class="grad">KIZARU</h1>
       <p>Trap. Street. Атмосфера. Новые релизы, альбомы и всё, что нужно, чтобы слушать на полной громкости.</p>
-      <a href="#tracks" class="btn btn-main">▶ Слушать</a>
+      <div class="cta">
+        <a href="#tracks" class="btn btn-main">▶ Слушать</a>
+        <a href="#clipsec" class="btn btn-main">▶ Клипы</a>
+      </div>
     </div>
     <div class="cover">
       <img src="https://i.scdn.co/image/ab67706c0000bebbd9b506d69ab8efef3816c252" alt="Обложка Born to Trap" onerror="this.style.display='none'">
@@ -538,7 +544,6 @@ function setOpen(i,open){
     b.querySelector('.lb').textContent=on?'Скрыть треки':'Показать треки';
   });
 }
-setOpen(9,true); // по умолчанию открыт BORN TO TRAP
 
 // ===== КЛИПЫ =====
 // Чтобы добавить клип — допишите его ID (часть ссылки после v=) в список
